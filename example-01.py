@@ -2,7 +2,10 @@
 # Student says: I don't know how to proceed with recursiveDigitSum. Help me!
 
 # Scenario 2:
-# I am failing the test cases for recursiveSubstring, can you help me debug my function?
+# I am failing the test cases on gradescope for recursiveSubstring, can you help me debug my function?
+
+# Scenario 3:
+# My code crashes for recursiveDigitSum2, can you help me debug my function?
 
 def recursiveDigitSum(n):
     '''
@@ -37,6 +40,23 @@ def recursiveSubstring(s, sub):
     
 
 ########################################
+
+    
+def recursiveDigitSum2(n):
+    '''
+    Computes the sum of digits of a positive integer n
+    - Your solution must use recursion in order to receive credit.
+    '''
+    numList = list(str(n))
+    newN = n - numList[0]*10**(float(len(numList))-1)
+    
+    if len(numList) == 0:
+        return 0
+    elif n == 0:
+        return 0
+    else:
+        return int(numList[0]) + recursiveDigitSum2(int(newN))
+
 
 newList = []
 
@@ -95,21 +115,7 @@ def recursiveAccumulateVowels(s):
             recursiveAccumulateVowels(s)
     return newestList
     
-    
-def recursiveDigitSum2(n):
-    '''
-    Computes the sum of digits of a positive integer n
-    - Your solution must use recursion in order to receive credit.
-    '''
-    numList = list(str(n))
-    newN = n - numList[0]*10**(float(len(numList))-1)
-    
-    if len(numList) == 0:
-        return 0
-    elif n == 0:
-        return 0
-    else:
-        return int(numList[0]) + recursiveDigitSum(int(newN))
+
       
     
    
