@@ -96,7 +96,7 @@ def recursiveAccumulateVowels(s):
     return newestList
     
     
-def recursiveDigitSum(n):
+def recursiveDigitSum2(n):
     '''
     Computes the sum of digits of a positive integer n
     - Your solution must use recursion in order to receive credit.
