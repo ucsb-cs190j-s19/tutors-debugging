@@ -7,6 +7,9 @@
 # Scenario 3:
 # My code crashes for recursiveDigitSum2, can you help me debug my function?
 
+
+# Repeat scenario 2 for recursiveAccumulateVowels
+
 def recursiveDigitSum(n):
     '''
     Computes the sum of digits of a positive integer n
